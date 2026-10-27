@@ -1,5 +1,4 @@
- HEAD
+HEAD
 hello world to aws
-=======
 hello world to devops
->>>>>>> feature
+feature
