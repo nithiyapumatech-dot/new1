@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 hi welcomw to aws 
+=======
+hello world
+>>>>>>> 62818f4fcd26539a2a729c56c1458d94fc1c9f70
