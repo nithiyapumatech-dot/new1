@@ -18,6 +18,7 @@ opipeline {
         stage('Run Java') {
             steps {
                 sh 'java demo'
+                echo 'build'
             }
         }
 
