@@ -1,4 +1,4 @@
-pipeline {
+opipeline {
     agent any
 
     stages {
@@ -11,7 +11,8 @@ pipeline {
         stage('Compile Java') {
             steps {
                 sh 'javac demo.java'
-            }
+                echo 'build started'
+            }   
         }
 
         stage('Run Java') {
