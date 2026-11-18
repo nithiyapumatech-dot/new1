@@ -1,30 +1,32 @@
-opipeline {
-    agent any
+pipeline {
+    agent {
+        label 'windows-agent'
+    }
+
+    triggers {
+        pollSCM('H/2 * * * *')
+    }
 
     stages {
-        stage('Checkout') {
+
+        stage('Build') {
             steps {
-                checkout scm
+                echo 'Building application...'
+                bat 'echo Build completed'
             }
         }
 
-        stage('Compile Java') {
+        stage('Test') {
             steps {
-                sh 'javac demo.java'
-                echo 'build started'
-            }   
-        }
-
-        stage('Run Java') {
-            steps {
-                sh 'java demo'
-                echo 'build'
+                echo 'Testing application...'
+                bat 'echo Test completed'
             }
         }
 
-        stage('Run Python') {
+        stage('Deploy') {
             steps {
-                sh 'python3 hello.py'
+                echo 'Deploying application...'
+                bat 'echo Deployment completed'
             }
         }
     }
